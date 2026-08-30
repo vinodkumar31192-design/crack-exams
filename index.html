@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepSprint — SSC CGL Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#"><span class="brand-mark">P</span><span>prepsprint</span></a>
+        <nav>
+          <button class="nav-item active" data-view="home"><span>⌂</span> Dashboard</button>
+          <button class="nav-item" data-view="practice"><span>◈</span> Practice arena</button>
+          <button class="nav-item" data-view="mock"><span>▣</span> Mock tests</button>
+          <button class="nav-item" data-view="progress"><span>↗</span> My progress</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="streak-card"><span class="flame">✦</span><div><b id="streakCount">7 day streak</b><small>Keep the momentum going!</small></div></div>
+          <button class="profile"><span class="avatar">M</span><span><b>Manoj</b><small>SSC CGL aspirant</small></span><i>⌄</i></button>
+        </div>
+      </aside>
+
+      <main>
+        <header><button class="mobile-menu" aria-label="menu">☰</button><div><p class="eyebrow" id="headerEyebrow">SATURDAY, 30 AUGUST</p><h1 id="pageTitle">SSC CGL Practice</h1></div><button class="notification" aria-label="notifications">♧<em></em></button></header>
+
+        <section id="home" class="view active-view">
+          <div class="hero-grid">
+            <div class="hero-copy"><div class="pill">YOUR DAILY GOAL <b id="goalText">12 / 200 questions</b></div><h2>Small steps. <em>Massive</em> score.</h2><p>Keep practising a little every day. Your CGL breakthrough is being built one question at a time.</p><div class="goal-track"><span id="goalFill"></span></div><div class="hero-actions"><button class="primary" data-start="mixed">Continue practising <span>→</span></button><button class="text-btn" data-view="progress">View progress</button></div></div>
+            <div class="hero-score"><div class="score-orbit"><div><strong id="accuracyNum">78<small>%</small></strong><span>overall accuracy</span></div></div><div class="score-label">↑ 6% <span>vs. last week</span></div><div class="score-caption">You're in the top 24%<br />of learners this week.</div></div>
+          </div>
+
+          <section class="section-heading"><div><p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p><h3>Today’s practice</h3></div><button class="all-link" data-view="practice">See all topics →</button></section>
+          <div class="topic-grid">
+            <article class="topic-card english"><div class="topic-icon">Aa</div><div class="topic-top"><span>ENGLISH LANGUAGE</span><button class="more" aria-label="Practice options" title="Practice options">•••</button></div><h4>Spotting errors</h4><p>Grammar · Medium</p><div class="card-footer"><span><b>12</b> questions left</span><button class="round-go" data-start="english">→</button></div></article>
+            <article class="topic-card reasoning"><div class="topic-icon">⌘</div><div class="topic-top"><span>GENERAL INTELLIGENCE</span><button class="more" aria-label="Practice options" title="Practice options">•••</button></div><h4>Number series</h4><p>Reasoning · Medium</p><div class="card-footer"><span><b>18</b> questions left</span><button class="round-go" data-start="reasoning">→</button></div></article>
+            <article class="topic-card mixed"><div class="topic-icon">↯</div><div class="topic-top"><span>MIXED REVISION</span><button class="more" aria-label="Practice options" title="Practice options">•••</button></div><h4>Quick 10 challenge</h4><p>English + Reasoning</p><div class="card-footer"><span><b>10</b> questions</span><button class="round-go" data-start="mixed">→</button></div></article>
+          </div>
+
+          <section class="bottom-grid"><div class="activity"><div class="section-heading compact"><div><p class="eyebrow">CONSISTENCY IS YOUR SUPERPOWER</p><h3>Practice activity</h3></div><button class="select">This week⌄</button></div><div class="chart"><div class="y-axis"><span>30</span><span>20</span><span>10</span><span>0</span></div><div class="bars"><i style="height:42%"></i><i style="height:72%"></i><i style="height:55%"></i><i style="height:88%"></i><i style="height:63%"></i><i class="today" style="height:100%"></i><i style="height:8%"></i></div></div><div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div><div class="weak"><p class="eyebrow">FOCUS AREA</p><h3>Strengthen your basics</h3><p>Your accuracy dips in <b>sentence improvement.</b> A quick revision can fix that.</p><button class="outline" data-start="english">Practise now →</button></div></section>
+        </section>
+
+        <section id="practice" class="view practice-view"><div class="practice-top"><div><p class="eyebrow" id="practiceLabel">UNLIMITED PRACTICE</p><h2 id="practiceTitle">Choose your challenge</h2><p id="practiceSub">Every attempt serves a fresh question from our practice generator.</p></div><div class="timer" id="timer">00:00</div></div><div class="mode-pills"><button class="mode active" data-mode="mixed">Mixed</button><button class="mode" data-mode="english">English</button><button class="mode" data-mode="reasoning">Reasoning</button></div><div class="difficulty-pills"><span>Difficulty</span><button class="difficulty active" data-difficulty="all">All levels</button><button class="difficulty medium" data-difficulty="medium">Medium</button><button class="difficulty hard" data-difficulty="hard">Hard</button></div><div class="practice-tools"><div class="session-status"><span class="pulse"></span><b id="sessionCount">0</b> solved this session</div><div class="practice-tool-actions"><button class="tool-btn" id="bookmarkBtn">Save question</button><button class="tool-btn" id="reviewSaved">Saved <b id="savedCount">0</b></button></div></div><article class="question-card"><div class="question-meta"><span id="questionTag">MIXED PRACTICE</span><span id="questionCount">Question 1 · +1 mark</span></div><div id="questionBody"></div><div class="options" id="options"></div><div class="answer-feedback" id="feedback"></div><div class="question-actions"><button class="ghost" id="skipBtn">Skip question</button><button class="primary" id="nextBtn">Check answer <span>→</span></button></div></article><p class="fresh-note">♾ No limit, no repeated routine — keep going for as long as you want.</p></section>
+
+        <section id="mock" class="view"><div class="page-intro"><p class="eyebrow">EXAM SIMULATION</p><h2>Mock test room</h2><p>Timed, balanced mini-mocks to build calm under pressure.</p></div><div class="mock-grid"><article><span>15 MIN</span><h3>Quick CGL warm-up</h3><p>10 English + 10 Reasoning questions</p><button class="primary" data-start="mixed">Start mock →</button></article><article><span>30 MIN</span><h3>Sectional sprint</h3><p>Focused English & reasoning drill</p><button class="primary" data-start="mixed">Start mock →</button></article></div></section>
+
+        <section id="progress" class="view"><div class="page-intro"><p class="eyebrow">YOUR LEARNING STORY</p><h2>Progress that compounds</h2><p>Keep practising to turn these signals into your success plan.</p></div><div class="stat-grid"><article><span>QUESTIONS SOLVED</span><strong id="solvedStat">142</strong><small>↑ 24 this week</small></article><article><span>ACCURACY</span><strong id="progressAccuracy">78%</strong><small>↑ 6% this week</small></article><article><span>BEST STREAK</span><strong>7 days</strong><small>Keep it alive today</small></article></div></section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
